@@ -41,7 +41,7 @@ def add_GyroscopeData(request):
             latidudenal=data['lati']
             # Add the template data to the database
             for i in range(len(GYRO_points)):
-                    newTemplate = GyroModel(template_name = templateName,x = GYRO_points[i][0], y = GYRO_points[i][1],z = GYRO_points[i][2],long = longitudenal, lati = latidudenal)
+                    newTemplate = GyroModel(template_name = templateName,x = GYRO_points[i][0], y = GYRO_points[i][1],z = GYRO_points[i][2],longi = longitudenal, lati = latidudenal)
                     newTemplate .save()
        
             return JsonResponse({'success':True,'message': 'Gyroscope Data received successfully'})

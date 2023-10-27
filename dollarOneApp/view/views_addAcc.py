@@ -39,7 +39,7 @@ def add_AccelerometerData(request):
         latidudenal=data['lati']
         # Add the template data to the database
         for i in range(len(acc_points)):
-                newTemplate = AccelorometerModel(template_name = templateName, x = acc_points[i][0], y = acc_points[i][1], z = acc_points[i][2], long = longitudenal, lati = latidudenal)
+                newTemplate = AccelorometerModel(template_name = templateName, x = acc_points[i][0], y = acc_points[i][1], z = acc_points[i][2], longi = longitudenal, lati = latidudenal)
                 newTemplate .save()
    
         return JsonResponse({'success':True,'message': 'Accelerometer Data received successfully'})
